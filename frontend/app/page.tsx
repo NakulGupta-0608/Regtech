@@ -12,9 +12,11 @@ export default function Home() {
 
       <div className="flex gap-6">
 
-        <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-800">
-          Institute Registration
-        </button>
+        <a href="/register">
+  <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-800">
+    Institute Registration
+  </button>
+</a>
 
         <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-800">
           Complaint Portal
