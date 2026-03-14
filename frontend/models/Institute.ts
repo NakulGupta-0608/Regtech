@@ -1,11 +1,24 @@
-import mongoose from "mongoose";
+import mongoose, { Schema, model, models } from "mongoose";
 
-const InstituteSchema = new mongoose.Schema({
-  instituteName: String,
-  ownerName: String,
-  address: String,
-  capacity: Number,
+const InstituteSchema = new Schema({
+  instituteName: {
+    type: String,
+    required: true
+  },
+  ownerName: {
+    type: String,
+    required: true
+  },
+  address: {
+    type: String,
+    required: true
+  },
+  capacity: {
+    type: Number,
+    required: true
+  }
 });
 
-export default mongoose.models.Institute ||
-  mongoose.model("Institute", InstituteSchema);
+const Institute = models.Institute || model("Institute", InstituteSchema);
+
+export default Institute;
